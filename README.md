@@ -1,16 +1,8 @@
-# xueyan-site
-
-TODO
-
-## Document
-
-TODO
-
-## Develop
-
-Please make sure that `Node` and `NPM` are installed on your computer, and `xueyan-typescript-cli` is installed globally. After switching current work path to this project root in CLI, run command `xt start` to live-compile this project.
-
-## Appendix
-
-Author: [xueyan-site](xueyan@xueyan.site)  
-Builder: [xueyan-typescript-cli](https://github.com/xueyan-site/xueyan-typescript-cli)  
+<p align="center" style="line-height:1.5;">
+  <img width="250px" src="https://github.com/xueyan-site/xueyan-site/blob/main/pub/ast/xueyan-site-card.png"></img>
+  <div align="center" style="font-size:28px">雪砚</div>
+  <div align="center" style="font-size:22px">xueyan-site</div>
+  <div align="center" style="font-size:16px">
+    please see <a target="_blank" href="https://xueyan.site">https://xueyan.site</a>
+  </div>
+</p>
