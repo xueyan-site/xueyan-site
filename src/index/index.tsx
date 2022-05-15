@@ -1,14 +1,18 @@
 import React from 'react'
+import { SwitchTheme } from 'xueyan-react-style'
+import { NarrowScreen } from 'com/narrow-screen'
+import { Header } from './header'
+import { ReactComponents } from './react-components'
 import styles from './index.scss'
-import { PageProps } from 'xueyan-react'
 
-export default function Index(props: PageProps) {
+export default function Index() {
   return (
-    <div className={styles.wrapper}>
-      <img className={styles.icon} src={`${XT_PATH}favicon.png`} />
-      <div className={styles.title}>😊 {props.page.name}</div>
-      <div className={styles.content}>{XT_NAME}</div>
-      <div className={styles.content}>{XT_AUTHOR}</div>
-    </div>
+    <NarrowScreen>
+      <Header/>
+      <SwitchTheme className={styles.theme} />
+      <div className={styles.lists}>
+        <ReactComponents/>
+      </div>
+    </NarrowScreen>
   )
 }

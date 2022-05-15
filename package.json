@@ -2,7 +2,7 @@
   "name": "xueyan-site",
   "version": "1.0.0",
   "author": "xueyan-site <xueyan@xueyan.site>",
-  "description": "TODO",
+  "description": "xueyan website project",
   "private": true,
   "scripts": {
     "start": "xt start",
@@ -14,7 +14,10 @@
     "lodash": "^4.14.0",
     "react": ">=16.8.0",
     "react-dom": ">=16.8.0",
-    "xueyan-react": "^1.5.0"
+    "xueyan-react": "^1.5.0",
+    "xueyan-react-list": "^1.0.1",
+    "xueyan-react-style": "^2.1.0",
+    "xueyan-react-transition": "^1.0.9"
   },
   "devDependencies": {
     "@babel/runtime": "^7.12.0",
