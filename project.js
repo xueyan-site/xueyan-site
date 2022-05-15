@@ -8,6 +8,9 @@ module.exports = {
     com: 'pub/com',
     utl: 'pub/utl',
   },
+  serve: {
+    port: 12002
+  },
   start: {
     proxies: [
       {
