@@ -2,7 +2,8 @@ import React from 'react'
 import { SwitchTheme } from 'xueyan-react-style'
 import { NarrowScreen } from 'com/narrow-screen'
 import { Header } from './header'
-import { ReactComponents } from './react-components'
+import { Bottom } from 'com/bottom'
+import { Projects } from './projects'
 import styles from './index.scss'
 
 export default function Index() {
@@ -11,8 +12,9 @@ export default function Index() {
       <Header/>
       <SwitchTheme className={styles.theme} />
       <div className={styles.lists}>
-        <ReactComponents/>
+        <Projects />
       </div>
+      <Bottom style={{ height: '60px' }} />
     </NarrowScreen>
   )
 }

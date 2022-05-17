@@ -9,7 +9,7 @@ module.exports = {
     utl: 'pub/utl',
   },
   serve: {
-    port: 12002
+    port: 12000
   },
   start: {
     proxies: [
