@@ -11,14 +11,6 @@ module.exports = {
   serve: {
     port: 12000
   },
-  start: {
-    proxies: [
-      {
-        match: /^\/api\//,
-        host: 'https://xxx.com'
-      }
-    ]
-  },
   module: {
     externals: {
       'react': 'React',
@@ -52,7 +44,7 @@ module.exports = {
       {
         key: 'normalize',
         rel: 'stylesheet',
-        href: 'https://cdn.bootcdn.net/ajax/libs/normalize/8.0.1/normalize.min.css'
+        href: "{{XT_PATH}}normalize.css"
       },
       {
         key: 'global',
@@ -64,22 +56,22 @@ module.exports = {
       {
         key: 'react',
         defer: true,
-        src: 'https://cdn.bootcdn.net/ajax/libs/react/16.14.0/umd/react.production.min.js'
+        src: "{{XT_PATH}}react.js"
       },
       {
         key: 'react-dom',
         defer: true,
-        src: 'https://cdn.bootcdn.net/ajax/libs/react-dom/16.14.0/umd/react-dom.production.min.js'
+        src: "{{XT_PATH}}react-dom.js"
       },
       {
         key: 'classnames',
         defer: true,
-        src: 'https://cdn.bootcdn.net/ajax/libs/classnames/2.3.1/index.min.js'
+        src: "{{XT_PATH}}classnames.js"
       },
       {
         key: 'lodash',
         defer: true,
-        src: 'https://cdn.bootcdn.net/ajax/libs/lodash.js/4.17.21/lodash.min.js'
+        src: "{{XT_PATH}}lodash.js"
       }
     ]
   }
