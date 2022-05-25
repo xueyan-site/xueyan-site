@@ -1,4 +1,5 @@
-import React, { Fragment } from 'react'
+import React, { Fragment, useEffect, useState } from 'react'
+import cn from 'classnames'
 import { usePage } from 'xueyan-react'
 import { List, ListItem } from 'xueyan-react-list'
 import styles from './projects.scss'
@@ -11,7 +12,7 @@ const PROJECT_MAP: Record<string, ListItemProps> = {
     option: '本站点',
     arrow: false,
     onClick: undefined,
-    image: 'https://xueyan.site/xueyan-icon-rounded.png'
+    image: XT_PATH + 'project.png'
   },
   'xueyan-react': {
     name: 'xueyan-react',
@@ -23,21 +24,20 @@ const PROJECT_MAP: Record<string, ListItemProps> = {
   },
   'xueyan-react-link': {
     name: 'xueyan-react-link',
-    desc: '支持渲染图片和文本',
+    desc: '以链接的形式渲染图片和文本',
     option: '链接'
   },
   'xueyan-react-portal': {
     name: 'xueyan-react-portal',
-    desc: '封装 React Portal 功能',
+    desc: 'React Portal',
     option: '传送门'
   },
   'xueyan-typescript-cli': {
     name: 'xueyan-typescript-cli',
-    desc: '支持开发命令行、模块、react组件和应用'
+    desc: '开发命令行、模块、react组件和应用'
   },
   'xueyan-react-button': {
     name: 'xueyan-react-button',
-    desc: '按钮组件',
     option: '按钮',
   },
   'xueyan-react-ellipsis': {
@@ -59,8 +59,8 @@ const PROJECT_MAP: Record<string, ListItemProps> = {
   },
   'xueyan-react-executor': {
     name: 'xueyan-react-executor',
-    desc: '将组件封装成函数',
-    option: '直调组件'
+    desc: '组件函数化',
+    option: '执行器'
   },
   'xueyan-react-markdown': {
     name: 'xueyan-react-markdown',
@@ -69,7 +69,7 @@ const PROJECT_MAP: Record<string, ListItemProps> = {
   },
   'xueyan-react-store': {
     name: 'xueyan-react-store',
-    desc: '封装 React Context 功能',
+    desc: 'React Context',
     option: '管理状态'
   },
   'xueyan-react-contents': {
@@ -78,7 +78,7 @@ const PROJECT_MAP: Record<string, ListItemProps> = {
   },
   'xueyan-react-icon': {
     name: 'xueyan-react-icon',
-    desc: '用 SVG 实现，可自定义',
+    desc: 'SVG 图标，可自定义',
     option: '图标'
   },
   'xueyan-react-playground': {
@@ -88,12 +88,12 @@ const PROJECT_MAP: Record<string, ListItemProps> = {
   },
   'xueyan-react-style': {
     name: 'xueyan-react-style',
-    desc: '支持自动切换暗黑模式',
-    option: '样式方案'
+    desc: '自动切换暗黑模式',
+    option: '样式'
   },
   'xueyan-react-doc': {
     name: 'xueyan-react-doc',
-    desc: '支持配置多个语言、版本和集合',
+    desc: '可配置多个语言、版本和集合',
     option: '文档'
   },
   'xueyan-react-input': {
@@ -106,7 +106,7 @@ const PROJECT_MAP: Record<string, ListItemProps> = {
   },
   'xueyan-react-transition': {
     name: 'xueyan-react-transition',
-    desc: '用于实现复杂过渡效果',
+    desc: '实现复杂过渡效果',
     option: '过渡'
   }
 }
@@ -172,11 +172,18 @@ function ProjectIcon({
 }: {
   item: ListItemProps
 }) {
-  return (
-    <img
-      className={styles.icon}
-      src={item.image || `https://xueyan.site/${item.name}/project.png`}
-    />
+  const [src, setSrc] = useState<string>()
+  useEffect(() => {
+    const src = item.image || `https://xueyan.site/${item.name}/project.png`
+    const img = document.createElement('img')
+    img.setAttribute('src', src)
+    img.onload = () => setSrc(src)
+    img.onerror = () => setSrc('')
+  }, [item.image])
+  return src ? (
+    <img className={styles.icon} src={src} />
+  ) : (
+    <div className={cn(styles.icon, styles.empty)} />
   )
 }
 
