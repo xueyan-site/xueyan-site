@@ -1,6 +1,5 @@
 import React, { Fragment, useEffect, useState } from 'react'
 import cn from 'classnames'
-import { usePage } from 'xueyan-react'
 import { List, ListItem } from 'xueyan-react-list'
 import styles from './projects.scss'
 import type { ListProps, ListItemProps } from 'xueyan-react-list'
@@ -11,7 +10,7 @@ const PROJECT_MAP: Record<string, ListItemProps> = {
     desc: 'https://xueyan.site',
     option: '本站点',
     arrow: false,
-    onClick: undefined,
+    href: undefined,
     image: XT_PATH + 'project.png'
   },
   'xueyan-react': {
@@ -188,19 +187,13 @@ function ProjectIcon({
 }
 
 export function Projects() {
-  const { router } = usePage()
-  const handleClick = (item: ListItemProps) => {
-    if (item.name) {
-      router.changeUrl('https://xueyan.site/' + item.name)
-    }
-  }
   return (
     <Fragment>
       {PROJECT_MATRIX.map((list, i) => (
         <List
           key={i}
           arrow={true}
-          onClick={handleClick}
+          target="_blank"
           {...list.props}
         >
           {list.list.map((item, j) => (
@@ -208,6 +201,7 @@ export function Projects() {
               key={j}
               label={item.name}
               icon={<ProjectIcon item={item}/>}
+              href={item.name && ('https://xueyan.site/' + item.name)}
               {...item}
             />
           ))}
