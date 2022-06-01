@@ -14,10 +14,10 @@
     "lodash": "^4.14.0",
     "react": ">=16.8.0",
     "react-dom": ">=16.8.0",
-    "xueyan-react": "^1.5.0",
+    "xueyan-react": "^1.6.0",
     "xueyan-react-list": "^1.0.5",
     "xueyan-react-style": "^2.1.0",
-    "xueyan-react-transition": "^1.0.9"
+    "xueyan-react-transition": "^1.0.11"
   },
   "devDependencies": {
     "@babel/runtime": "^7.12.0",
