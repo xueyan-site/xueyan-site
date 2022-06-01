@@ -11,7 +11,7 @@ const PROJECT_MAP: Record<string, ListItemProps> = {
     option: '本站点',
     arrow: false,
     href: undefined,
-    image: XT_PATH + 'project.png'
+    image: XT_ASSETS_PATH + 'project.png'
   },
   'xueyan-react': {
     name: 'xueyan-react',

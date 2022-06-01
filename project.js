@@ -37,41 +37,41 @@ module.exports = {
         key: 'favicon',
         rel: "icon",
         type: "image/png",
-        href: "{{XT_PATH}}favicon.png"
+        href: "{{XT_ASSETS_PATH}}favicon.png"
       }
     ],
     styles: [
       {
         key: 'normalize',
         rel: 'stylesheet',
-        href: "{{XT_PATH}}normalize.css"
+        href: "{{XT_ASSETS_PATH}}normalize.css"
       },
       {
         key: 'global',
         rel: 'stylesheet',
-        href: '{{XT_PATH}}global.css'
+        href: '{{XT_ASSETS_PATH}}global.css'
       }
     ],
     scripts: [
       {
         key: 'react',
         defer: true,
-        src: "{{XT_PATH}}react.js"
+        src: "{{XT_ASSETS_PATH}}react.js"
       },
       {
         key: 'react-dom',
         defer: true,
-        src: "{{XT_PATH}}react-dom.js"
+        src: "{{XT_ASSETS_PATH}}react-dom.js"
       },
       {
         key: 'classnames',
         defer: true,
-        src: "{{XT_PATH}}classnames.js"
+        src: "{{XT_ASSETS_PATH}}classnames.js"
       },
       {
         key: 'lodash',
         defer: true,
-        src: "{{XT_PATH}}lodash.js"
+        src: "{{XT_ASSETS_PATH}}lodash.js"
       }
     ]
   }
