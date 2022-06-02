@@ -173,7 +173,7 @@ function ProjectIcon({
 }) {
   const [src, setSrc] = useState<string>()
   useEffect(() => {
-    const src = item.image || `https://xueyan.site/${item.name}/project.png`
+    const src = item.image || `https://xueyan.site/${item.name}/ast/project.png`
     const img = document.createElement('img')
     img.setAttribute('src', src)
     img.onload = () => setSrc(src)
