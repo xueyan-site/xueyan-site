@@ -1,0 +1,39 @@
+.section:not(:first-child) {
+  margin-top: 24px;
+}
+.block:not(:first-child) {
+  margin-top: 8px;
+}
+strong {
+  font-weight: 600;
+  color: var(--pink);
+}
+a {
+  color: var(--pink);
+  font-weight: 600;
+  text-decoration: unset;
+}
+
+/********************************/
+
+.page {
+  width: 760px;
+  margin: 0 auto;
+  padding: 60px 50px;
+  box-sizing: border-box;
+  font-size: 14px;
+  line-height: 1.5;
+}
+.title {
+  font-size: 28px;
+  font-weight: 600;
+  line-height: 1;
+}
+.plabel {
+  width: 166px;
+  display: inline-block;
+}
+.footerline {
+  border-top: 1px dashed var(--area1);
+  padding-top: 8px;
+}

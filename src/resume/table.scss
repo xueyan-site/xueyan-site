@@ -1,0 +1,21 @@
+table.table {
+  display: block;
+  width: max-content;
+  max-width: 100%;
+  margin-top: 0;
+  margin-bottom: 0;
+  border-spacing: 0;
+  border-collapse: collapse;
+  overflow: auto;
+  th {
+    font-weight: 400;
+    padding: 4px 10px;
+    box-sizing: border-box;
+    border: 1px solid var(--area6);
+  }
+  td {
+    padding: 4px 10px;
+    box-sizing: border-box;
+    border: 1px solid var(--area6);
+  } 
+}
