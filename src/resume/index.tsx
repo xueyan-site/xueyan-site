@@ -14,13 +14,13 @@ export default function Index() {
         </div>
         <div className={styles.section}>
           <div>
-            男，25岁，四川人，软件工程学士，<strong>4年前端</strong> 开发经验
+            男，25岁，四川人，软件工程学士，<strong>4年前端</strong> 开发经验。
           </div>
           <div>
-            曾就职于 <strong>拼多多</strong>、<strong>小红书</strong> ，从事电子商务方面，前端研发，或其管理类工作
+            曾就职于 <strong>拼多多</strong>、<strong>小红书</strong> ，从事电商领域前端研发工作。
           </div>
           <div>
-            寻求 <strong>成都地区</strong>，以 <strong>React</strong> 或 <strong>Vue</strong> 为主要技术栈的，前端研发，或其管理类岗位
+            寻求 <strong>成都地区</strong>，以 <strong>React</strong> 或 <strong>Vue</strong> 为主要技术栈的，前端研发或管理岗位。
           </div>
         </div>
         <div className={styles.section}>
@@ -31,15 +31,14 @@ export default function Index() {
         </div>
         <div className={styles.section}>
           <div className={styles.block}>
-            <strong>2019年初至2020年上半年</strong>，独立负责商家装修工作，开发了店铺首页、店铺专题页、装修模版市场等装修业务。
-            期间，制作了装修框架，拼多多后台所有装修或者类似装修形式的业务，都是用它搭建的。
+            <strong>2019年初至2020年上半年</strong>，独立负责商家装修前端工作，开发了店铺首页、店铺专题页、装修模版市场等装修业务。
+            期间研发的装修框架，被服务于拼多多后台所有装修和类装修模式的业务。
           </div>
           <div className={styles.block}>
-            <strong>2020年下半年</strong>，转战低代码平台和商家小程序，后加入商家批发项目并成为负责人。
+            <strong>2020年下半年</strong>，先转战低代码平台和商家小程序，后参与研发并管理商家批发平台前端业务。
           </div>
           <div className={styles.block}>
-            <strong>2021年初至今</strong>，负责商家店铺业务线，包括装修、店铺和平台治理三个板块，附带管理批发项目（后交给其他组负责）。
-            团队人数最多的时候有6人，最少的时候有3人。
+            <strong>2021年初至今</strong>，管理商家店铺前端业务线，包括装修、店铺和平台治理三个板块，同时负责部分项目的 SSR 改造，附带管理批发业务（后交给其他组负责），成员人数为 3 至 6 人。
           </div>
         </div>
         <div className={styles.section}>
