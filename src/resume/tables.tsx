@@ -41,7 +41,7 @@ const EXPERIENCE_LIST = [
     duration: '3年3月',
     start: '19-02-15',
     end: '22-04-27',
-    desc: <div>商家店铺，前端（<strong>react</strong>）</div>
+    desc: <div>商家店铺，前端（<strong>React</strong>）</div>
   },
   {
     name: XHS_LOGO,
@@ -49,7 +49,7 @@ const EXPERIENCE_LIST = [
     duration: '7月',
     start: '18-07-02',
     end: '19-02-12',
-    desc: <div>电商，前端（<strong>vue</strong>）</div>
+    desc: <div>电商，前端（<strong>Vue</strong>）</div>
   },
   {
     name: XHS_LOGO,
@@ -57,7 +57,7 @@ const EXPERIENCE_LIST = [
     duration: '11月',
     start: '17-07-03',
     end: '18-06-03',
-    desc: <div>电商，前端实习（<strong>vue</strong>）</div>
+    desc: <div>电商，前端实习（<strong>Vue</strong>）</div>
   },
   {
     name: ECUT_LOGO,
