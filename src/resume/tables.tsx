@@ -24,12 +24,12 @@ const EXPERIENCE_OPTIONS: TableOption[] = [
   {
     key: 'desc',
     align: 'center',
-    width: '200px'
+    width: '240px'
   },
   {
     key: 'timeslot',
     align: 'center',
-    width: '240px',
+    width: '200px',
     render: (_value, item) => `${item.start} ~ ${item.end}`
   }
 ]
@@ -41,7 +41,7 @@ const EXPERIENCE_LIST = [
     duration: '3年3月',
     start: '19-02-15',
     end: '22-04-27',
-    desc: '商家店铺，前端'
+    desc: <div>商家店铺，前端（<strong>react</strong>）</div>
   },
   {
     name: XHS_LOGO,
@@ -49,7 +49,7 @@ const EXPERIENCE_LIST = [
     duration: '7月',
     start: '18-07-02',
     end: '19-02-12',
-    desc: '电商，前端'
+    desc: <div>电商，前端（<strong>vue</strong>）</div>
   },
   {
     name: XHS_LOGO,
@@ -57,7 +57,7 @@ const EXPERIENCE_LIST = [
     duration: '11月',
     start: '17-07-03',
     end: '18-06-03',
-    desc: '电商，前端实习'
+    desc: <div>电商，前端实习（<strong>vue</strong>）</div>
   },
   {
     name: ECUT_LOGO,
@@ -165,7 +165,9 @@ const COMPANY_WORK_LIST = [
   {
     name: (
       <div>
-        拼多多业务
+        在拼多多
+        <br/>
+        负责的业务
       </div>
     ),
     works: (
