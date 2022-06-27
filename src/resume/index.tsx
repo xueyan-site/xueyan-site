@@ -24,6 +24,11 @@ export default function Index() {
           </div>
         </div>
         <div className={styles.section}>
+          <div>
+            特点：了解电商；有前端审美能力；有 SSR 项目开发经验；熟悉装修模式（后台编辑页面至前台渲染）；
+          </div>
+        </div>
+        <div className={styles.section}>
           <CompanyWorks/>
         </div>
         <div className={styles.section}>
@@ -42,8 +47,7 @@ export default function Index() {
           <PersonalWorks/>
         </div>
         <div className={styles.section}>
-          <div>上表所列，是我近期开发的个人作品。你可通过它们来了解我的编程水平。</div>
-          <div>以下项目，是比较有代表性的：</div>
+          <div>上表所列，是我近期开发的个人作品。其中有代表性的是：</div>
           {[
             {
               name: 'xueyan-react-store',
@@ -72,8 +76,6 @@ export default function Index() {
           <Experience/>
         </div>
         <div className={styles.section}>
-          <div>这次离开上海，是打算来成都定居的，所以想要找一个成都地区的岗位。</div>
-          <div>如果有需要，请联系我，联系方式如下：</div>
           <div>微信：xueyan-site</div>
           <div>
             手机：<a href='tel://15070836209' target="_blank">150-7083-6209</a>
@@ -84,6 +86,9 @@ export default function Index() {
           </div>
           <div>
             网页：<a href='https://xueyan.site/resume' target="_blank">https://xueyan.site/resume</a>
+          </div>
+          <div>
+            照片：<a href='https://xueyan.site/ast/avatar.webp' target="_blank">https://xueyan.site/ast/avatar.webp</a>
           </div>
         </div>
       </div>
