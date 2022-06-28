@@ -83,19 +83,25 @@ export default function Index() {
           <Experience/>
         </div>
         <div className={styles.section}>
-          <div>微信：xueyan-site</div>
-          <div>
-            手机：<a href='tel://15070836209' target="_blank">150-7083-6209</a>
-            （<a href='sms://15070836209' target="_blank">短信</a>）
-          </div>
-          <div>
-            邮箱：<a href='mailto://xueyan@xueyan.site' target="_blank">xueyan@xueyan.site</a>
-          </div>
-          <div>
-            网页：<a href='https://xueyan.site/resume' target="_blank">https://xueyan.site/resume</a>
-          </div>
-          <div>
-            照片：<a href='https://xueyan.site/ast/avatar.webp' target="_blank">https://xueyan.site/ast/avatar.webp</a>
+          <div className={styles.footer}>
+            <div className={styles.footerItem}>
+              <div>微信：xueyan-site</div>
+              <div>
+                手机：<a href='tel://15070836209' target="_blank">150-7083-6209</a>
+                （<a href='sms://15070836209' target="_blank">短信</a>）
+              </div>
+              <div>
+                邮箱：<a href='mailto://xueyan@xueyan.site' target="_blank">xueyan@xueyan.site</a>
+              </div>
+            </div>
+            <div className={styles.footerItem}>
+              <div>
+                网页：<a href='https://xueyan.site/resume' target="_blank">https://xueyan.site/resume</a>
+              </div>
+              <div>
+                照片：<a href='https://xueyan.site/ast/avatar.webp' target="_blank">https://xueyan.site/ast/avatar.webp</a>
+              </div>
+            </div>
           </div>
         </div>
       </div>

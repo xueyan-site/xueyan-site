@@ -34,3 +34,11 @@ a {
   width: 166px;
   display: inline-block;
 }
+.footer {
+  display: flex;
+  flex-flow: row nowrap;
+  align-items: flex-end;
+}
+.footerItem:not(:first-child) {
+  margin-left: 40px;
+}
