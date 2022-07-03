@@ -1,5 +1,5 @@
 .section:not(:first-child) {
-  margin-top: 24px;
+  margin-top: 20px;
 }
 .block:not(:first-child) {
   margin-top: 8px;
@@ -7,6 +7,12 @@
 strong {
   font-weight: 600;
   color: var(--pink);
+}
+hr {
+  border: none;
+  outline: none;
+  margin: 20px 0;
+  border-top: 1px solid var(--area3);
 }
 a {
   color: var(--pink);
