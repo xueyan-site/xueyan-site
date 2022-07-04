@@ -1,0 +1,28 @@
+.pw {
+  padding: 4px 0;
+  .row {
+    display: flex;
+    &:not(:first-child) {
+      margin-top: 3px;
+    }
+  }
+  .label {
+    flex: none;
+    width: 80px;
+    text-align: center;
+    margin-right: 16px;
+    line-height: 28px;
+  }
+  .cont {
+    flex: 1;
+    display: grid;
+    row-gap: 3px;
+    column-gap: 3px;
+    grid-template-columns: repeat(auto-fill, 28px);
+    .icon {
+      height: 28px;
+      display: block;
+      border-radius: 3px;
+    }
+  }
+}

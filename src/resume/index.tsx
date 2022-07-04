@@ -1,32 +1,41 @@
 import React from 'react'
 import styles from './index.scss'
 import { WideScreen } from 'com/wide-screen'
-import { Experience, PersonalWorks, CompanyWorks } from './tables'
+import { Section } from './section'
+import { Experience } from './experience'
+import { CompanyWorks } from './company-work'
+import { PersonalWorks } from './personal-work'
 
 export default function Index() {
   return (
     <WideScreen>
       <div className={styles.page}>
-        <div className={styles.section}>
-          <div className={styles.title}>
-            杨凡
-          </div>
-        </div>
-        <div className={styles.section}>
+        <Section
+          labelType='title'
+          label="杨凡"
+        >
           <div>
-            男，25岁，四川人，软件工程学士，<strong>4年前端</strong> 开发经验。
+            男，25岁，四川人，软件工程学士。
           </div>
           <div>
-            曾就职于 <strong>拼多多</strong>、<strong>小红书</strong> ，从事电商领域前端研发工作。
+            <strong>4年前端</strong> 开发经验，曾就职于 <strong>拼多多</strong>、<strong>小红书</strong>。
           </div>
           <div>
-            从事电商五年；从事装修工作五年；曾管理拼多多批发、店铺业务线；
+            从事电商五年；从事装修五年；曾管理拼多多批发、店铺业务线；
           </div>
-        </div>
-        <div className={styles.section}>
+        </Section>
+
+        <Section
+          labelType='subtitle'
+          label={<div>在拼多多<br/>负责的业务</div>}
+        >
           <CompanyWorks/>
-        </div>
-        <div className={styles.section}>
+        </Section>
+
+        <Section
+          labelType='subtitle'
+          label="上家经历"
+        >
           <div className={styles.block}>
             <strong>2019年初～2020年上半年</strong>，独立负责商家装修前端工作，从零开发店铺首页、专题页、模版市场等装修业务。
             期间自研的装修框架，被服务于商家端所有装修和类装修业务。
@@ -37,18 +46,30 @@ export default function Index() {
           <div className={styles.block}>
             <strong>2021年初至今</strong>，管理商家店铺前端业务线（包括装修、店铺、平台治理三个板块，成员3～6人），负责部分项目的 SSR 改造，附带管理批发平台。
           </div>
-          <hr/>
+        </Section>
+
+        <hr/>
+
+        <Section
+          labelType='subtitle'
+          label="工作技能"
+        >
+          <div>常用：typescript、react</div>
           <div>
-            了解：React调度、协调过程；操作系统进程、线程；浏览器进程、线程；浏览器渲染帧；
-            DNS解析；TCP连接；SSL连接和CA校验；Cookie、Session、JWT；网络缓存；CORS跨域；
-            复合图层；JS作用域（闭包）、原型链和this；task与jobs；
+          了解：React调度、协调过程；操作系统进程、线程；浏览器进程、线程；浏览器渲染帧；
+          DNS解析；TCP连接；SSL连接和CA校验；Cookie、Session、JWT；网络缓存；CORS跨域；
+          复合图层；JS作用域（闭包）、原型链和this；task与jobs；
           </div>
-        </div>
-        <div className={styles.section}>
+        </Section>
+
+        <Section
+          labelType='subtitle'
+          label="个人作品"
+        >
           <PersonalWorks/>
-        </div>
-        <div className={styles.section}>
-          <div>上表所列，是我近期为应聘开发的作品，以供您了解我的编程能力。其中有代表性的是：</div>
+          <div style={{ marginTop: '16px' }}>
+            上表所列，是我近期为应聘开发的作品，以供您了解我的编程能力。其中有代表性的是：
+          </div>
           {[
             {
               name: 'xueyan-react-transition',
@@ -76,11 +97,21 @@ export default function Index() {
               {item.desc}
             </div>
           ))}
-        </div>
-        <div className={styles.section}>
+        </Section>
+
+        <hr/>
+
+        <Section
+          labelType='subtitle'
+          label="过往经历"
+        >
           <Experience/>
-        </div>
-        <div className={styles.section}>
+        </Section>
+
+        <Section
+          labelType='subtitle'
+          label="联系方式"
+        >
           <div className={styles.footer}>
             <div className={styles.footerItem}>
               <div>微信：xueyan-site</div>
@@ -101,7 +132,8 @@ export default function Index() {
               </div>
             </div>
           </div>
-        </div>
+        </Section>
+
       </div>
     </WideScreen>
   )

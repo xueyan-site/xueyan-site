@@ -1,0 +1,26 @@
+.cw {
+  padding: 4px 0;
+  a {
+    color: var(--font);
+    font-weight: 400;
+    text-decoration: underline;
+  }
+  .row {
+    display: flex;
+    &:not(:first-child) {
+      margin-top: 3px;
+    }
+  }
+  .label {
+    flex: none;
+    width: 80px;
+    text-align: center;
+    margin-right: 16px;
+  }
+  .cont {
+    flex: 1;
+    display: flex;
+    flex-flow: row wrap;
+    align-items: center;
+  }
+}
