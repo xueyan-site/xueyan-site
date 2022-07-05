@@ -12,15 +12,17 @@ export interface TableOption {
 }
 
 export function Table({
+  style,
   data,
   options
 }: {
+  style?: React.CSSProperties
   data: Record<string, any>[]
   options: TableOption[]
 }) {
   const showHeader = options.filter(i => i.label).length > 0
   return (
-    <table className={styles.table}>
+    <table className={styles.table} style={style}>
       {showHeader && (
         <thead>
           <tr>

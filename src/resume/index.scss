@@ -1,6 +1,16 @@
 .block:not(:first-child) {
   margin-top: 8px;
 }
+.records {
+  display: flex;
+  .label {
+    width: 50px;
+    flex: none;
+  }
+  .content {
+    flex: 1;
+  }
+}
 strong {
   font-weight: 600;
   color: var(--pink);
@@ -12,9 +22,9 @@ hr {
   border-top: 1px solid var(--area8);
 }
 a {
-  color: var(--pink);
+  color: var(--font);
   font-weight: 600;
-  text-decoration: unset;
+  text-decoration: underline;
 }
 
 /********************************/
@@ -25,7 +35,7 @@ a {
   padding: 60px 45px;
   box-sizing: border-box;
   font-size: 14px;
-  line-height: 1.5;
+  line-height: 1.6;
   position: relative;
 }
 .title {

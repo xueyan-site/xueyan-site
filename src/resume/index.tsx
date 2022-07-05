@@ -1,9 +1,9 @@
 import React from 'react'
+import cn from 'classnames'
 import styles from './index.scss'
 import { WideScreen } from 'com/wide-screen'
 import { Section } from './section'
 import { Experience } from './experience'
-import { CompanyWorks } from './company-work'
 import { PersonalWorks } from './personal-work'
 
 export default function Index() {
@@ -21,30 +21,41 @@ export default function Index() {
             <strong>4年前端</strong> 开发经验，曾就职于 <strong>拼多多</strong>、<strong>小红书</strong>。
           </div>
           <div>
-            从事电商五年；从事装修五年；曾管理拼多多批发、店铺业务线；
+            从事电商五年；从事装修五年；曾负责拼多多批发、店铺业务线；
           </div>
+          <Experience style={{ marginTop: '24px' }}/>
         </Section>
+
+        <hr/>
 
         <Section
           labelType='subtitle'
-          label={<div>在拼多多<br/>负责的业务</div>}
-        >
-          <CompanyWorks/>
-        </Section>
-
-        <Section
-          labelType='subtitle'
-          label="上家经历"
+          label="项目经历"
         >
           <div className={styles.block}>
-            <strong>2019年初～2020年上半年</strong>，独立负责商家装修前端工作，从零开发店铺首页、专题页、模版市场等装修业务。
+            <strong>【多多店铺装修】：2019年初～至今</strong>
+            <br/>
+            独立负责商家装修前端工作，从零开发店铺首页、专题页、模版市场等装修业务。
+            <br/>
+            帮助数百万商家，向八亿用户更好的展示自家店铺和商品。
+            <br/>
             期间自研的装修框架，被服务于商家端所有装修和类装修业务。
           </div>
+
           <div className={styles.block}>
-            <strong>2020年下半年</strong>，参与商家小程序的建设，后参与研发并管理批发平台（成员2～4人）。
+            <strong>【多多批发业务线】：2020年下半年～2021年下半年</strong>
+            <br/>
+            参与开发了批发的首页和商详页，并于后期负责批发平台前端（成员2～4人）。
+            <br/>
+            帮助数百万商家和众多线下商家对接，降低批发门槛，实现一件代发，促进货物分销速度。
           </div>
+
           <div className={styles.block}>
-            <strong>2021年初至今</strong>，管理商家店铺前端业务线（包括装修、店铺、平台治理三个板块，成员3～6人），负责部分项目的 SSR 改造，附带管理批发平台。
+            <strong>【多多店铺业务线】：2021年上半年～至今</strong>
+            <br/>
+            负责商家店铺前端业务线，包括店铺、平台治理两个板块（成员3～6人）。
+            <br/>
+            帮助商家入驻、退店、管理子账号、提交经营资质、申请减免处罚。
           </div>
         </Section>
 
@@ -54,11 +65,20 @@ export default function Index() {
           labelType='subtitle'
           label="工作技能"
         >
-          <div>常用：typescript、react</div>
-          <div>
-          了解：React调度、协调过程；操作系统进程、线程；浏览器进程、线程；浏览器渲染帧；
-          DNS解析；TCP连接；SSL连接和CA校验；Cookie、Session、JWT；网络缓存；CORS跨域；
-          复合图层；JS作用域（闭包）、原型链和this；task与jobs；
+          <div className={cn(styles.block, styles.records)}>
+            <div className={styles.label}>常用：</div>
+            <div className={styles.content}>
+              typescript、react
+            </div>
+          </div>
+          <div className={cn(styles.block, styles.records)}>
+            <div className={styles.label}>了解：</div>
+            <div className={styles.content}>
+              React调度、协调过程；
+              DNS、TCP、HTTP、SSL等网络知识；
+              操作系统与浏览器进程、线程，浏览器渲染帧、复合图层、task与jobs、Cookie、Session、JWT、网络缓存、CORS跨域等浏览器知识；
+              作用域、原型链、this等JS基础；
+            </div>
           </div>
         </Section>
 
@@ -81,7 +101,7 @@ export default function Index() {
             },
             {
               name: 'xueyan-typescript-cli',
-              desc: <span>TS 脚手架，可在一分钟内搭建出 <strong>多项目 HTTPS 整站</strong></span>,
+              desc: 'TS 脚手架，可在一分钟内搭建出 多项目 HTTPS 整站',
               href: 'https://xueyan.site/xueyan-typescript-cli/zh?doc=0005'
             }
           ].map(item => (
@@ -100,13 +120,6 @@ export default function Index() {
         </Section>
 
         <hr/>
-
-        <Section
-          labelType='subtitle'
-          label="过往经历"
-        >
-          <Experience/>
-        </Section>
 
         <Section
           labelType='subtitle'
