@@ -1,0 +1,57 @@
+.block:not(:first-child) {
+  margin-top: 8px;
+}
+.records {
+  display: flex;
+  .label {
+    width: 50px;
+    flex: none;
+  }
+  .content {
+    flex: 1;
+  }
+}
+strong {
+  font-weight: 600;
+  color: var(--pink);
+}
+hr {
+  border: none;
+  outline: none;
+  margin: 24px 0;
+  border-top: 1px solid var(--area8);
+}
+a {
+  color: var(--font);
+  font-weight: 600;
+  text-decoration: underline;
+}
+
+/********************************/
+
+.page {
+  width: 760px;
+  margin: 0 auto;
+  padding: 60px 45px;
+  box-sizing: border-box;
+  font-size: 14px;
+  line-height: 1.6;
+  position: relative;
+}
+.title {
+  font-size: 28px;
+  font-weight: 600;
+  line-height: 1;
+}
+.plabel {
+  width: 166px;
+  display: inline-block;
+}
+.footer {
+  display: flex;
+  flex-flow: row nowrap;
+  align-items: flex-end;
+}
+.footerItem:not(:first-child) {
+  margin-left: 40px;
+}

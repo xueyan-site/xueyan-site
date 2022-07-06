@@ -1,151 +1,123 @@
 import React from 'react'
-import cn from 'classnames'
-import styles from './index.scss'
 import { WideScreen } from 'com/wide-screen'
-import { Section } from './section'
-import { Experience } from './experience'
-import { PersonalWorks } from './personal-work'
+import styles from './index.scss'
 
 export default function Index() {
   return (
     <WideScreen>
       <div className={styles.page}>
-        <Section
-          labelType='title'
-          label="杨凡"
-        >
+
+        <h1>杨凡</h1>
+        <div>
           <div>
-            男，25岁，四川人，软件工程学士。
+            男，25岁，四川人，软件工程学士；
           </div>
           <div>
-            <strong>4年前端</strong> 开发经验，曾就职于 <strong>拼多多</strong>、<strong>小红书</strong>。
+            <strong>4年前端</strong> 开发经验，曾就职于 <strong>拼多多</strong>、<strong>小红书</strong>；
           </div>
           <div>
             从事电商五年；从事装修五年；曾负责拼多多批发、店铺业务线；
           </div>
-          <Experience style={{ marginTop: '24px' }}/>
-        </Section>
+        </div>
 
-        <hr/>
+        <h2>个人优势</h2>
+        <ol>
+          <li>开发过许多前端工具包，有个人的开发作品集，热爱编程，具备较强的逻辑思维和抽象能力；</li>
+          <li>具备4年前端工作经历，对预防、处理意外情况，设计、维护、沟通项目，有一定的经验；</li>
+          <li>有大型项目的独立开发、参与和管理经验，既能独立推进任务，也能与其他开发配合；</li>
+        </ol>
 
-        <Section
-          labelType='subtitle'
-          label="项目经历"
-        >
-          <div className={styles.block}>
-            <strong>【多多店铺装修】：2019年初～至今</strong>
-            <br/>
-            独立负责商家装修前端工作，从零开发店铺首页、专题页、模版市场等装修业务。
-            <br/>
-            帮助数百万商家，向八亿用户更好的展示自家店铺和商品。
-            <br/>
-            期间自研的装修框架，被服务于商家端所有装修和类装修业务。
+        <h2>项目经历</h2>
+        <section>
+          <div>
+            <strong>多多店铺装修</strong> ・ 2019年初 ～ 2022年4月
           </div>
-
-          <div className={styles.block}>
-            <strong>【多多批发业务线】：2020年下半年～2021年下半年</strong>
-            <br/>
-            参与开发了批发的首页和商详页，并于后期负责批发平台前端（成员2～4人）。
-            <br/>
-            帮助数百万商家和众多线下商家对接，降低批发门槛，实现一件代发，促进货物分销速度。
+          <ol>
+            <li>目的：赋能于数百万商家，让他们可以向八亿用户更好的展示自家店铺和商品；</li>
+            <li>技术：React、Typescript、内部组件库、自研装修框架；</li>
+            <li>
+              业绩：独自搭建起整套拼多多装修系统，并惠及其他业务线；
+              <ol>
+                <li>独立负责商家装修前端工作，完成了从零搭建店铺首页、专题页、模版市场等装修的工作；</li>
+                <li>期间自研的装修框架，被服务于商家端所有装修和类装修业务，包括商详装修、平台协议等；</li>
+              </ol>
+            </li>
+          </ol>
+        </section>
+        <section>
+          <div>
+            <strong>多多批发业务</strong> ・ 2020年下半年 ～ 2021年下半年
           </div>
+          <ol>
+            <li>目的：帮助有销售渠道的商家，与生产厂家直接对接，也为C端用户提供直接购买批发商品的能力；</li>
+            <li>人员：初期参与者八九人左右，稳定迭代后交与我负责，成员2～3人；</li>
+            <li>技术：React、Typescript、内部组件库、HTML构建时预渲染、骨架屏、SKU多选算法；</li>
+            <li>
+              业绩：按时高质量完成批发重点页面，并提升了用户选择商品的速度；
+              <ol>
+                <li>在规定的时间里，开发了批发的首页和商详页，稳定上线，至今没有改动；</li>
+                <li>负责实现了批发的SKU多选算法，使用户可以批量筛选商品；</li>
+              </ol>
+            </li>
+          </ol>
+        </section>
 
-          <div className={styles.block}>
-            <strong>【多多店铺业务线】：2021年上半年～至今</strong>
-            <br/>
-            负责商家店铺前端业务线，包括店铺、平台治理两个板块（成员3～6人）。
-            <br/>
-            帮助商家入驻、退店、管理子账号、提交经营资质、申请减免处罚。
+        <h2>工作经历</h2>
+        <section>
+          <div>
+            <strong>拼多多</strong>（胡桃街（上海）信息技术有限公司） ・ 3年3月 ・ 前端开发 ・ 2019-02 ~ 2022-04
           </div>
-        </Section>
-
-        <hr/>
-
-        <Section
-          labelType='subtitle'
-          label="工作技能"
-        >
-          <div className={cn(styles.block, styles.records)}>
-            <div className={styles.label}>常用：</div>
-            <div className={styles.content}>
-              typescript、react
-            </div>
+          <ol>
+            <li>负责商家装修前端业务，帮助商家向用户个性化展示自家店铺和商品；</li>
+            <li>负责批发前端业务，让大小商家、厂家有一个对接的平台，降低批发的门槛，促进货物分销速度；</li>
+            <li>负责店铺前端业务，帮助商家入驻、退店、管理账号、填报各种经营相关资料、协议；</li>
+            <li>负责平台治理前端业务，帮助商家查看、确认、申请减免各种处罚；</li>
+          </ol>
+        </section>
+        <section>
+          <div>
+            <strong>小红书</strong>（行吟信息科技（上海）有限公司） ・ 7月 ・ 前端开发 ・ 2018-07 ~ 2019-02
           </div>
-          <div className={cn(styles.block, styles.records)}>
-            <div className={styles.label}>了解：</div>
-            <div className={styles.content}>
-              React调度、协调过程；
-              DNS、TCP、HTTP、SSL等网络知识；
-              操作系统与浏览器进程、线程，浏览器渲染帧、复合图层、task与jobs、Cookie、Session、JWT、网络缓存、CORS跨域等浏览器知识；
-              作用域、原型链、this等JS基础；
-            </div>
+          <div>
+            <strong>小红书</strong>（行吟信息科技（上海）有限公司） ・ 11个月 ・ 前端实习 ・ 2017-07 ~ 2018-06
           </div>
-        </Section>
+          <ol>
+            <li>负责运营后台，活动、店铺装修前端；</li>
+            <li>负责小红书 App 内部分前端页面；</li>
+          </ol>
+        </section>
 
-        <Section
-          labelType='subtitle'
-          label="个人作品"
-        >
-          <PersonalWorks/>
-          <div style={{ marginTop: '16px' }}>
-            上表所列，是我近期为应聘开发的作品，以供您了解我的编程能力。其中有代表性的是：
-          </div>
-          {[
-            {
-              name: 'xueyan-react-transition',
-              desc: 'React 过渡动画组件'
-            },
-            {
-              name: 'xueyan-react-style',
-              desc: 'React 样式主题'
-            },
-            {
-              name: 'xueyan-typescript-cli',
-              desc: 'TS 脚手架，可在一分钟内搭建出 多项目 HTTPS 整站',
-              href: 'https://xueyan.site/xueyan-typescript-cli/zh?doc=0005'
-            }
-          ].map(item => (
-            <div key={item.name}>
-              <a 
-                className={styles.plabel}
-                target="_blank"
-                href={item.href || `https://xueyan.site/${item.name}`}
-              >{item.name}</a>
-              （<a href={`https://github.com/xueyan-site/${item.name}`} target="_blank">
-                源码
-              </a>）
-              {item.desc}
-            </div>
-          ))}
-        </Section>
+        <h2>教育经历</h2>
+        <ol>
+          <li><strong>东华理工大学</strong> ・ 软件工程 ・ 本科 ・ 2014年9月 ~ 2018年7月</li>
+        </ol>
 
-        <hr/>
+        <h2>开发技能</h2>
+        <ol>
+          <li>熟悉 React、Typescript、Git、Charles 等前端常用工具；</li>
+          <li>能熟练运用作用域、原型链、Promise等JS知识开发项目；</li>
+          <li>知道常见的数据结构与算法，能利用它们解决实际问题；</li>
+          <li>了解 DNS、TCP、HTTP、SSL 等网络知识；</li>
+          <li>了解进程、线程、渲染帧、复合图层、微宏任务、会话、缓存、跨域等浏览器知识；</li>
+        </ol>
 
-        <Section
-          labelType='subtitle'
-          label="联系方式"
-        >
-          <div className={styles.footer}>
-            <div className={styles.footerItem}>
-              <div>微信：xueyan-site</div>
-              <div>
-                手机：<a href='tel://15070836209' target="_blank">150-7083-6209</a>
-                （<a href='sms://15070836209' target="_blank">短信</a>）
-              </div>
-              <div>
-                邮箱：<a href='mailto://xueyan@xueyan.site' target="_blank">xueyan@xueyan.site</a>
-              </div>
-            </div>
-            <div className={styles.footerItem}>
-              <div>
-                网页：<a href='https://xueyan.site/resume' target="_blank">https://xueyan.site/resume</a>
-              </div>
-              <div>
-                照片：<a href='https://xueyan.site/ast/avatar.webp' target="_blank">https://xueyan.site/ast/avatar.webp</a>
-              </div>
-            </div>
-          </div>
-        </Section>
+        <h2>作品相关</h2>
+        <ol>
+          <li>作品集：<a target="_blank" href="https://xueyan.site">https://xueyan.site</a></li>
+          <li>TS 脚手架：<a target="_blank" href="https://xueyan.site/xueyan-typescript-cli/zh?doc=0005">xueyan-typescript-cli</a></li>
+        </ol>
+
+        <h2>联系方式</h2>
+        <ol>
+          <li>微信：xueyan-site</li>
+          <li>
+            手机：<a href='tel://15070836209' target="_blank">150-7083-6209</a>
+            （<a href='sms://15070836209' target="_blank">短信</a>）
+          </li>
+          <li>
+            邮箱：<a href='mailto://xueyan@xueyan.site' target="_blank">xueyan@xueyan.site</a>
+          </li>
+        </ol>
 
       </div>
     </WideScreen>

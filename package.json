@@ -16,6 +16,7 @@
     "react-dom": ">=16.8.0",
     "xueyan-react": "^1.6.0",
     "xueyan-react-list": "^1.0.5",
+    "xueyan-react-markdown": "^3.0.6",
     "xueyan-react-style": "^2.1.0",
     "xueyan-react-transition": "^1.0.11"
   },
