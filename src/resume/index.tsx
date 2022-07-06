@@ -10,7 +10,7 @@ export default function Index() {
         <h1>杨凡</h1>
         <div>
           <div>
-            男，25岁，四川人，软件工程学士；
+            男，25岁，四川人，软件工程专业（本科）学士；
           </div>
           <div>
             <strong>4年前端</strong> 开发经验，曾就职于 <strong>拼多多</strong>、<strong>小红书</strong>；
