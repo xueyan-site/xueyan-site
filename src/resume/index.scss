@@ -1,16 +1,60 @@
 .page {
-  width: 760px;
+  width: 800px;
   margin: 0 auto;
-  padding: 20px 0 40px;
+  padding: 40px 40px;
   box-sizing: border-box;
   font-size: 14px;
   line-height: 1.6;
   position: relative;
-  h2 {
-    padding: 0.6em 0 0.2em;
-    border-bottom: 1px solid var(--area3);
+}
+
+.header {
+  display: flex;
+  .left {
+    width: 100px;
+    flex: none;
   }
-  section {
-    padding-left: 24px;
+  .right {
+    flex: 1;
+  }
+  .name {
+    line-height: 1;
+    font-size: 32px;
+    font-weight: 600;
+  }
+  .attrs {
+    display: flex;
+    flex-flow: row wrap;
+  }
+  .attr {
+    width: 200px;
+    line-height: 1.8;
+  }
+  .label {
+    display: inline-block;
+    width: 45px;
+    color: var(--font1);
+    &::after {
+      content: '：';
+    }
+  }
+}
+
+.section {
+  margin-top: 16px;
+  .title {
+    background-color: var(--area6);
+  }
+  .titletxt {
+    display: inline-block;
+    padding: 0 12px;
+    background-color: var(--area);
+    color: var(--base);
+  }
+  .block {
+    margin-top: 16px;
+  }
+  ol {
+    margin-block: 8px;
   }
 }
