@@ -13,7 +13,7 @@ export function Header() {
       <img className={styles.cover} src={COVER_IMG} />
       <div className={styles.mask}/>
       <div className={styles.banner}>
-        <img className={styles.avatar} src={XT_ASSETS_PATH + 'xueyan-icon-rounded.png'} />
+        <img className={styles.avatar} src={P_ASSETS_PATH + 'xueyan-icon-rounded.png'} />
         <div className={styles.info}>
           <div className={styles.name}>雪砚</div>
           <div className={styles.desc}>xueyan-site</div>

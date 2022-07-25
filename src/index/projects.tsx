@@ -11,10 +11,10 @@ const PROJECT_MAP: Record<string, ListItemProps> = {
     option: '本站点',
     arrow: false,
     href: undefined,
-    image: XT_ASSETS_PATH + 'project.png'
+    image: P_ASSETS_PATH + 'project.png'
   },
-  'xueyan-react': {
-    name: 'xueyan-react',
+  'sdin-react': {
+    name: 'sdin-react',
     desc: 'React 应用程序辅助包'
   },
   'xueyan-react-drawer': {
@@ -31,8 +31,8 @@ const PROJECT_MAP: Record<string, ListItemProps> = {
     desc: 'React Portal',
     option: '传送门'
   },
-  'xueyan-typescript-cli': {
-    name: 'xueyan-typescript-cli',
+  'sdin': {
+    name: 'sdin',
     desc: '开发命令行、模块、react组件和应用'
   },
   'xueyan-react-button': {
@@ -119,7 +119,7 @@ const PROJECT_MATRIX: {
       label: '命令行工具'
     },
     list: [
-      PROJECT_MAP['xueyan-typescript-cli']
+      PROJECT_MAP['sdin']
     ]
   },
   {
@@ -135,7 +135,7 @@ const PROJECT_MATRIX: {
       label: 'React 工具包'
     },
     list: [
-      PROJECT_MAP['xueyan-react'],
+      PROJECT_MAP['sdin-react'],
       PROJECT_MAP['xueyan-react-style'],
       PROJECT_MAP['xueyan-react-store'],
       PROJECT_MAP['xueyan-react-executor'],

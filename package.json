@@ -5,16 +5,16 @@
   "description": "xueyan website project",
   "private": true,
   "scripts": {
-    "dev": "xt dev",
-    "build": "xt build",
-    "serve": "xt serve"
+    "dev": "sdin dev",
+    "build": "sdin build",
+    "serve": "sdin serve"
   },
   "dependencies": {
     "classnames": "^2.3.0",
     "lodash": "^4.14.0",
-    "react": ">=16.8.0",
-    "react-dom": ">=16.8.0",
-    "xueyan-react": "^1.6.0",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "sdin-react": "^1.0.0",
     "xueyan-react-list": "^1.0.5",
     "xueyan-react-markdown": "^3.0.6",
     "xueyan-react-style": "^2.1.0",
@@ -23,8 +23,8 @@
   "devDependencies": {
     "@babel/runtime": "^7.12.0",
     "@types/lodash": "^4.14.0",
-    "@types/react": ">=16.8.0",
-    "@types/react-dom": ">=16.8.0",
+    "@types/react": "^18.0.15",
+    "@types/react-dom": "^18.0.6",
     "typescript": "^4.0.0"
   },
   "browserslist": {
