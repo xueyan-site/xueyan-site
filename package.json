@@ -2,7 +2,7 @@
   "name": "xueyan-site",
   "version": "1.0.0",
   "author": "xueyan-site <xueyan@xueyan.site>",
-  "description": "xueyan website project",
+  "description": "xueyan website main project",
   "private": true,
   "scripts": {
     "dev": "sdin dev",
@@ -10,15 +10,15 @@
     "serve": "sdin serve"
   },
   "dependencies": {
+    "ark-list": "^1.0.0",
+    "ark-markdown": "^1.0.0",
+    "ark-transition": "^1.0.0",
     "classnames": "^2.3.0",
     "lodash": "^4.14.0",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "sdin-react": "^1.0.0",
-    "xueyan-react-list": "^1.0.5",
-    "xueyan-react-markdown": "^3.0.6",
-    "xueyan-react-style": "^2.1.0",
-    "xueyan-react-transition": "^1.0.11"
+    "solor": "^1.0.0"
   },
   "devDependencies": {
     "@babel/runtime": "^7.12.0",

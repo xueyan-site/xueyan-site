@@ -1,8 +1,8 @@
 import React, { Fragment, useEffect, useState } from 'react'
 import cn from 'classnames'
-import { List, ListItem } from 'xueyan-react-list'
+import { List, ListItem } from 'ark-list'
 import styles from './projects.scss'
-import type { ListProps, ListItemProps } from 'xueyan-react-list'
+import type { ListProps, ListItemProps } from 'ark-list'
 
 const PROJECT_MAP: Record<string, ListItemProps> = {
   'xueyan-site': {
@@ -17,17 +17,32 @@ const PROJECT_MAP: Record<string, ListItemProps> = {
     name: 'sdin-react',
     desc: 'React 应用程序辅助包'
   },
-  'xueyan-react-drawer': {
-    name: 'xueyan-react-drawer',
+  'stine': {
+    name: 'stine',
+    desc: 'React Context',
+    option: '管理状态'
+  },
+  'solor': {
+    name: 'solor',
+    desc: '支持暗黑模式',
+    option: '样式'
+  },
+  'sicon': {
+    name: 'sicon',
+    desc: 'SVG 图标，可自定义',
+    option: '图标'
+  },
+  'ark-drawer': {
+    name: 'ark-drawer',
     option: '抽屉'
   },
-  'xueyan-react-link': {
-    name: 'xueyan-react-link',
+  'ark-link': {
+    name: 'ark-link',
     desc: '以链接的形式渲染图片和文本',
     option: '链接'
   },
-  'xueyan-react-portal': {
-    name: 'xueyan-react-portal',
+  'ark-portal': {
+    name: 'ark-portal',
     desc: 'React Portal',
     option: '传送门'
   },
@@ -35,76 +50,61 @@ const PROJECT_MAP: Record<string, ListItemProps> = {
     name: 'sdin',
     desc: '开发命令行、模块、react组件和应用'
   },
-  'xueyan-react-button': {
-    name: 'xueyan-react-button',
+  'ark-button': {
+    name: 'ark-button',
     option: '按钮',
   },
-  'xueyan-react-ellipsis': {
-    name: 'xueyan-react-ellipsis',
+  'ark-ellipsis': {
+    name: 'ark-ellipsis',
     option: '省略'
   },
-  'xueyan-react-list': {
-    name: 'xueyan-react-list',
+  'ark-list': {
+    name: 'ark-list',
     option: '列表'
   },
-  'xueyan-react-select': {
-    name: 'xueyan-react-select',
+  'ark-select': {
+    name: 'ark-select',
     option: '选择'
   },
-  'xueyan-react-clone': {
-    name: 'xueyan-react-clone',
+  'ark-clone': {
+    name: 'ark-clone',
     desc: '保留 ref，自定义合并 props',
     option: '克隆元素'
   },
-  'xueyan-react-executor': {
-    name: 'xueyan-react-executor',
+  'ark-executor': {
+    name: 'ark-executor',
     desc: '组件函数化',
     option: '执行器'
   },
-  'xueyan-react-markdown': {
-    name: 'xueyan-react-markdown',
+  'ark-markdown': {
+    name: 'ark-markdown',
     desc: '渲染 Markdown 字符串',
     option: 'MD'
   },
-  'xueyan-react-store': {
-    name: 'xueyan-react-store',
-    desc: 'React Context',
-    option: '管理状态'
-  },
-  'xueyan-react-contents': {
-    name: 'xueyan-react-contents',
+  'ark-contents': {
+    name: 'ark-contents',
     option: '目录'
   },
-  'xueyan-react-icon': {
-    name: 'xueyan-react-icon',
-    desc: 'SVG 图标，可自定义',
-    option: '图标'
-  },
-  'xueyan-react-playground': {
-    name: 'xueyan-react-playground',
+  'ark-playground': {
+    name: 'ark-playground',
     desc: '封装 react-live 组件',
     option: '编辑运行'
   },
-  'xueyan-react-style': {
-    name: 'xueyan-react-style',
-    desc: '自动切换暗黑模式',
-    option: '样式'
-  },
-  'xueyan-react-doc': {
-    name: 'xueyan-react-doc',
+  'ark-doc': {
+    name: 'ark-doc',
     desc: '可配置多个语言、版本和集合',
     option: '文档'
   },
-  'xueyan-react-input': {
-    name: 'xueyan-react-input',
+  'ark-input': {
+    name: 'ark-input',
     option: '输入'
   },
-  'xueyan-react-popover': {
-    name: 'xueyan-react-popover',
+  'ark-popover': {
+    name: 'ark-popover',
     option: '弹出框'
   },
-  'xueyan-react-transition': {
-    name: 'xueyan-react-transition',
+  'ark-transition': {
+    name: 'ark-transition',
     desc: '实现复杂过渡效果',
     option: '过渡'
   }
@@ -124,7 +124,7 @@ const PROJECT_MATRIX: {
   },
   {
     props: {
-      label: 'React 应用程序'
+      label: '应用程序'
     },
     list: [
       PROJECT_MAP['xueyan-site']
@@ -135,13 +135,14 @@ const PROJECT_MATRIX: {
       label: 'React 工具包'
     },
     list: [
+      PROJECT_MAP['solor'],
+      PROJECT_MAP['stine'],
+      PROJECT_MAP['sicon'],
       PROJECT_MAP['sdin-react'],
-      PROJECT_MAP['xueyan-react-style'],
-      PROJECT_MAP['xueyan-react-store'],
-      PROJECT_MAP['xueyan-react-executor'],
-      PROJECT_MAP['xueyan-react-clone'],
-      PROJECT_MAP['xueyan-react-portal'],
-      PROJECT_MAP['xueyan-react-transition']
+      PROJECT_MAP['ark-executor'],
+      PROJECT_MAP['ark-clone'],
+      PROJECT_MAP['ark-portal'],
+      PROJECT_MAP['ark-transition']
     ]
   },
   {
@@ -149,19 +150,18 @@ const PROJECT_MATRIX: {
       label: 'React 组件'
     },
     list: [
-      PROJECT_MAP['xueyan-react-doc'],
-      PROJECT_MAP['xueyan-react-icon'],
-      PROJECT_MAP['xueyan-react-markdown'],
-      PROJECT_MAP['xueyan-react-popover'],
-      PROJECT_MAP['xueyan-react-contents'],
-      PROJECT_MAP['xueyan-react-ellipsis'],
-      PROJECT_MAP['xueyan-react-playground'],
-      PROJECT_MAP['xueyan-react-list'],
-      PROJECT_MAP['xueyan-react-link'],
-      PROJECT_MAP['xueyan-react-button'],
-      PROJECT_MAP['xueyan-react-select'],
-      PROJECT_MAP['xueyan-react-input'],
-      PROJECT_MAP['xueyan-react-drawer'],
+      PROJECT_MAP['ark-doc'],
+      PROJECT_MAP['ark-markdown'],
+      PROJECT_MAP['ark-popover'],
+      PROJECT_MAP['ark-contents'],
+      PROJECT_MAP['ark-ellipsis'],
+      PROJECT_MAP['ark-playground'],
+      PROJECT_MAP['ark-list'],
+      PROJECT_MAP['ark-link'],
+      PROJECT_MAP['ark-button'],
+      PROJECT_MAP['ark-select'],
+      PROJECT_MAP['ark-input'],
+      PROJECT_MAP['ark-drawer'],
     ]
   }
 ]
