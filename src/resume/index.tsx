@@ -87,7 +87,7 @@ export default function Index() {
           <div className={styles.block}>
             <ol>
               <li>作品集：<a target="_blank" href="https://xueyan.site">https://xueyan.site</a></li>
-              <li>Typescript 脚手架：<a target="_blank" href="https://xueyan.site/xueyan-typescript-cli/zh?doc=0005">xueyan-typescript-cli</a></li>
+              <li>Typescript 脚手架：<a target="_blank" href="https://xueyan.site/sdin/zh?doc=0005">sdin</a></li>
             </ol>
           </div>
         </div>
