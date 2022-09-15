@@ -41,9 +41,9 @@
 }
 
 .section {
-  margin-top: 16px;
   .title {
     background-color: var(--area6);
+    margin: 16px 0;
   }
   .titletxt {
     display: inline-block;
@@ -52,9 +52,12 @@
     color: var(--base);
   }
   .block {
-    margin-top: 16px;
+    margin-bottom: 8px;
   }
   ol {
     margin-block: 8px;
+  }
+  a {
+    text-decoration: none;
   }
 }
