@@ -90,7 +90,7 @@ export default function Index() {
           </div>
           <div className={styles.block}>
             <div>
-              <strong>蚂蚁金服 ・ 前端 ・ 2019-08 ~ 至今</strong>
+              <strong>蚂蚁金服 ・ 前端 ・ 2022-08 ~ 至今</strong>
             </div>
             <ol>
               <li>负责 WorldFirst 商家门户和入驻；</li>
