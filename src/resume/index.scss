@@ -1,17 +1,31 @@
-.page {
-  width: 800px;
-  margin: 0 auto;
-  padding: 40px 40px;
-  box-sizing: border-box;
+.wrapper {
+  width: 100%;
+  background-color: #eee;
+  color: #333;
   font-size: 14px;
   line-height: 1.6;
-  position: relative;
+  font-weight: 400;
+  .page {
+    width: 800px;
+    margin: 0 auto;
+    padding: 60px 40px 80px 40px;
+    box-sizing: border-box;
+    position: relative;
+  }
+  a {
+    color: #0033EE;
+  }
+  strong {
+    color: #8041a5;
+    font-weight: 400;
+  }
 }
 
 .header {
   display: flex;
+  padding-bottom: 8px;
   .left {
-    width: 100px;
+    width: 140px;
     flex: none;
   }
   .right {
@@ -19,45 +33,92 @@
   }
   .name {
     line-height: 1;
-    font-size: 32px;
+    font-size: 24px;
     font-weight: 600;
+    padding: 0 24px;
   }
   .attrs {
     display: flex;
     flex-flow: row wrap;
   }
   .attr {
-    width: 200px;
+    flex: 1;
     line-height: 1.8;
   }
   .label {
     display: inline-block;
-    width: 45px;
-    color: var(--font1);
-    &::after {
-      content: '：';
-    }
+    width: 40px;
+    opacity: .5;
   }
 }
 
 .section {
+  margin-top: 12px;
   .title {
-    background-color: var(--area6);
-    margin: 16px 0;
-  }
-  .titletxt {
-    display: inline-block;
-    padding: 0 12px;
-    background-color: var(--area);
-    color: var(--base);
+    display: block;
+    padding: 6px 16px;
+    opacity: .5;
   }
   .block {
-    margin-bottom: 8px;
+    background-color: #fff;
+    border-radius: 12px;
+    padding: 16px;
+    +.block {
+      margin-top: 6px;
+    }
   }
-  ol {
-    margin-block: 8px;
+  .flex {
+    display: flex;
+    align-items: stretch;
+    .block {
+      flex: 1;
+      +.block {
+        margin-top: 0;
+        margin-left: 16px;
+      }
+    }
   }
-  a {
-    text-decoration: none;
+}
+
+.list {
+  display: table;
+  .item {
+    display: table-row;
+  }
+  .cell {
+    display: table-cell;
+  }
+  .label {
+    display: table-cell;
+    padding-right: 8px;
+    white-space: nowrap;
+  }
+}
+
+.work {
+  display: flex;
+  .icon {
+    width: 40px;
+    height: 40px;
+    border-radius: 4px;
+  }
+  .main {
+    margin-left: 16px;
+  }
+}
+
+.main {
+  .name {
+    font-size: 16px;
+    font-weight: 600;
+    line-height: 24px;
+  }
+  .desc {
+    opacity: .7;
+    font-size: 12px;
+    line-height: 16px;
+  }
+  .content {
+    margin-top: 8px;
   }
 }

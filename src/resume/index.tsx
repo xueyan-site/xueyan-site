@@ -1,8 +1,15 @@
 import React from 'react'
 import { WideScreen } from 'com/wide-screen'
 import styles from './index.scss'
+import ICON01 from './icon01.webp'
+import ICON02 from './icon02.webp'
+import ICON03 from './icon03.webp'
+import ICON04 from './icon04.webp'
 
-const ATTRS_LIST = [
+const ATTRS_LIST: {
+  label: string
+  content: React.ReactNode
+}[][] = [
   [
     {
       label: '性别',
@@ -20,15 +27,15 @@ const ATTRS_LIST = [
   [
     {
       label: '工作',
-      content: '前端，4年'
+      content: '四年，前端'
     },
     {
       label: '目前',
-      content: '成都，蚂蚁'
+      content: '成都，蚂蚁金服'
     },
     {
       label: '意向',
-      content: '成都，国企前端 20k+'
+      content: '成都，国企前端'
     }
   ],
   [
@@ -49,7 +56,7 @@ const ATTRS_LIST = [
 
 export default function Index() {
   return (
-    <WideScreen>
+    <div className={styles.wrapper}>
       <div className={styles.page}>
 
         <div className={styles.header}>
@@ -73,111 +80,120 @@ export default function Index() {
         </div>
 
         <div className={styles.section}>
-          <div className={styles.title}>
-            <span className={styles.titletxt}>个人作品</span>
-          </div>
-          <div className={styles.block}>
-            <ol>
-              <li><a target="_blank" href="https://xueyan.site/sdin/zh?doc=0005">前端脚手架：sdin</a></li>
-              <li><a target="_blank" href="https://xueyan.site">作品集：https://xueyan.site</a></li>
-            </ol>
+          <div className={styles.flex}>
+            <div className={styles.block}>
+              <div className={styles.work}>
+                <img className={styles.icon} src={ICON04}/>
+                <div className={styles.main}>
+                  <div className={styles.name}>东华理工大学</div>
+                  <div className={styles.desc}>2014.09 ~ 2018.07 ｜ 软件工程 本科 学士</div>
+                </div>
+              </div>
+            </div>
+            <div className={styles.block}>
+              <div className={styles.list}>
+                <div className={styles.item}>
+                  <div className={styles.label}>作品集：</div>
+                  <div className={styles.cell}>
+                    <a target="_blank" href="https://xueyan.site">https://xueyan.site</a>
+                  </div>
+                </div>
+                <div className={styles.item}>
+                  <div className={styles.label}>前端脚手架：</div>
+                  <div className={styles.cell}>
+                    <a target="_blank" href="https://xueyan.site/sdin/zh?doc=0005">https://xueyan.site/sdin</a>
+                  </div>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
 
         <div className={styles.section}>
-          <div className={styles.title}>
-            <span className={styles.titletxt}>工作经历</span>
+          <div className={styles.title}>工作经历</div>
+          <div className={styles.block}>
+            <div className={styles.work}>
+              <img className={styles.icon} src={ICON01}/>
+              <div className={styles.main}>
+                <div className={styles.name}>蚂蚁集团</div>
+                <div className={styles.desc}>2022.08 ~ 至今 ｜ 体验技术部 ｜ 高级前端工程师</div>
+                <div className={styles.content}>
+                  负责 WorldFirst 平台的注册、入驻、完善资料、开通服务等基础功能；
+                </div>
+              </div>
+            </div>
           </div>
           <div className={styles.block}>
-            <div>
-              <strong>蚂蚁金服 ・ 前端 ・ 2022-08 ~ 至今</strong>
+            <div className={styles.work}>
+              <img className={styles.icon} src={ICON02}/>
+              <div className={styles.main}>
+                <div className={styles.name}>拼多多</div>
+                <div className={styles.desc}>2019.02 ~ 2022.04（3年3月）｜ 商家前端 ｜高级前端工程师</div>
+                <div className={styles.content}>
+                  前期，独立负责 <strong>店铺装修</strong>，包括商家店铺首页、商品详情页等装修场景；
+                  <br/>
+                  中期，负责 <a href="https://pifa.pinduoduo.com/">批发市场</a>，包括移动端和 PC 端；
+                  <br/>
+                  后期，负责 <strong>店铺业务线</strong>，包括店铺装修、店铺基础功能（入驻、退店、填报资料、管理账号等）、平台治理（违规处罚相关功能）等业务；
+                </div>
+              </div>
             </div>
-            <ol>
-              <li>负责 WorldFirst 商家门户和入驻；</li>
-            </ol>
           </div>
           <div className={styles.block}>
-            <div>
-              <strong>拼多多 ・ 前端 ・ 3年3月（2019-02 ~ 2022-04）</strong>
+            <div className={styles.work}>
+              <img className={styles.icon} src={ICON03}/>
+              <div className={styles.main}>
+                <div className={styles.name}>小红书</div>
+                <div className={styles.desc}>
+                  2018.07 ~ 2019.02（7月）｜ 电商C端 ｜前端工程师
+                  <br/>
+                  2017.07 ~ 2018.06（11月）｜ 电商B端 ｜前端实习生
+                </div>
+                <div className={styles.desc}></div>
+                <div className={styles.content}>
+                  实习期间，在电商B端工作，负责电商运营系统，和商家页面装修编辑器；
+                  <br/>
+                  转正后，在电商C端工作，负责小红书 App 电商部分页面，以及小程序平台的部分功能；
+                </div>
+              </div>
             </div>
-            <ol>
-              <li>负责装修业务，类似于淘宝的旺铺、京东的通天塔；</li>
-              <li>参与批发市场，类似于淘宝的1688；</li>
-              <li>负责平台治理，给商家提供查询、申诉或减免各种违规处罚的平台；</li>
-              <li>负责店铺业务，帮助商家入驻、退店、管理账号、填报各种经营相关资料、协议；</li>
-            </ol>
-          </div>
-          <div className={styles.block}>
-            <div>
-              <strong>小红书 ・ 前端 ・ 7个月（2018-07 ~ 2019-02）</strong>
-            </div>
-            <ol>
-              <li>负责小红书 App 手机端，电商业务；</li>
-            </ol>
-          </div>
-          <div className={styles.block}>
-            <div>
-              <strong>小红书 ・ 前端（实习） ・ 11个月（2017-07 ~ 2018-06）</strong>
-            </div>
-            <ol>
-              <li>负责电商运营后台系统，和装修编辑器；</li>
-            </ol>
           </div>
         </div>
 
         <div className={styles.section}>
-          <div className={styles.title}>
-            <span className={styles.titletxt}>项目经历</span>
-          </div>
+          <div className={styles.title}>重要项目经历</div>
           <div className={styles.block}>
-            <div>
-              <strong>拼多多 ・ 店铺装修 ・ 2019年初 ～ 2022年4月</strong>
+            <div className={styles.main}>
+              <div className={styles.name}>
+                拼多多 店铺装修
+              </div>
+              <div className={styles.desc}>
+                2019年初 ～ 2022年4月
+              </div>
+              <div className={styles.content}>
+                <div>从零建立起店铺首页、专题页、品牌装修、小程序装修、模版市场等装修业务；</div>
+                <div>自我调研实现，页面装修框架，推广服务于商家端所有装修和类装修业务，包括商详装修、平台协议等；</div>
+                <div>技术：React、Typescript、内部组件库、自研装修框架、微前端架构（PC）、客户端组件包（移动端）；</div>
+              </div>
             </div>
-            <ol>
-              <li>独立负责商家装修前端工作，从零建立起店铺首页、专题页、模版市场等装修业务；</li>
-              <li>期间自研的装修框架，被服务于商家端所有装修和类装修业务，包括商详装修、平台协议等；</li>
-              <li>技术：React、Typescript、内部组件库、自研装修框架；</li>
-            </ol>
           </div>
           <div className={styles.block}>
-            <div>
-              <strong>
-                拼多多 ・ <a href="https://pifa.pinduoduo.com/">批发市场</a> ・ 2020年下半年 ～ 2021年下半年
-              </strong>
+            <div className={styles.main}>
+              <div className={styles.name}>
+                拼多多 <a href="https://pifa.pinduoduo.com/">批发市场</a>
+              </div>
+              <div className={styles.desc}>
+                2020年下半年 ～ 2021年下半年
+              </div>
+              <div className={styles.content}>
+                <div>参与了从零建立批发的 PC 端和移动端整个过程，主要负责首页、商品详情页，和整体业务分配；</div>
+                <div>自我调研实现，商品的 SKU 单选和多选算法，抽成框架，供商家端所有选品处使用；</div>
+                <div>技术：React、Typescript、内部组件库、HTML构建时渲染骨架屏（PC）、服务端渲染（移动端）；</div>
+              </div>
             </div>
-            <ol>
-              <li>负责批发首页和商详页；</li>
-              <li>实现批发的SKU多选算法，解决用户批量选品时，SKU单选选品慢的痛点；</li>
-              <li>技术：React、Typescript、内部组件库、HTML构建时渲染骨架屏；</li>
-            </ol>
           </div>
         </div>
-
-        <div className={styles.section}>
-          <div className={styles.title}>
-            <span className={styles.titletxt}>教育经历</span>
-          </div>
-          <div className={styles.block}>
-            <ol>
-              <li><strong>东华理工大学</strong> ・ 软件工程 ・ 本科学士 ・ 2014年9月 ~ 2018年7月</li>
-            </ol>
-          </div>
-        </div>
-
-        <div className={styles.section}>
-          <div className={styles.title}>
-            <span className={styles.titletxt}>专业技能</span>
-          </div>
-          <div className={styles.block}>
-            <ol>
-              <li>常用工具：React、Sass、Typescript、Git、Charles；</li>
-              <li>接触过的业务类型：移动端页面、微信小程序、服务端渲染、微服务架构、构建预渲染、直接渲染；</li>
-              <li>知识储备：常见数据结构与算法；DNS、TCP、HTTP、SSL等网络知识；进程、线程、渲染帧、合成层、微宏任务、会话、缓存、跨域等浏览器知识；</li>
-            </ol>
-          </div>
-        </div>
-
       </div>
-    </WideScreen>
+    </div>
   )
 }
