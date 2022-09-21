@@ -1,3 +1,6 @@
+html, body {
+  background-color: #eee;
+}
 .wrapper {
   width: 100%;
   background-color: #eee;
@@ -8,7 +11,7 @@
   .page {
     width: 800px;
     margin: 0 auto;
-    padding: 60px 40px 80px 40px;
+    padding: 60px 50px;
     box-sizing: border-box;
     position: relative;
   }
@@ -23,48 +26,54 @@
 
 .header {
   display: flex;
-  padding-bottom: 8px;
-  .left {
-    width: 140px;
+  padding-bottom: 32px;
+  .avatar {
     flex: none;
+    width: 100px;
+    height: 120px;
+    display: block;
+    background-color: #f4f4f4;
+    border-radius: 8px;
   }
-  .right {
+  .content {
     flex: 1;
+    margin-left: 24px;
+    padding-top: 12px;
   }
   .name {
     line-height: 1;
-    font-size: 24px;
+    font-size: 20px;
     font-weight: 600;
-    padding: 0 24px;
   }
-  .attrs {
+  .attrss {
+    margin-top: 12px;
     display: flex;
-    flex-flow: row wrap;
-  }
-  .attr {
-    flex: 1;
-    line-height: 1.8;
-  }
-  .label {
-    display: inline-block;
-    width: 40px;
-    opacity: .5;
+    flex-flow: row nowrap;
+    justify-content: space-between;
+    padding-right: 16px;
+    .attr {
+      line-height: 1.8;
+    }
+    .label {
+      width: 40px;
+      opacity: .5;
+      display: inline-block;
+    }
   }
 }
 
 .section {
-  margin-top: 12px;
   .title {
     display: block;
-    padding: 6px 16px;
+    padding: 16px 16px 8px;
     opacity: .5;
   }
   .block {
     background-color: #fff;
     border-radius: 12px;
-    padding: 16px;
+    padding: 14px 16px;
     +.block {
-      margin-top: 6px;
+      margin-top: 8px;
     }
   }
   .flex {
@@ -78,47 +87,46 @@
       }
     }
   }
-}
-
-.list {
-  display: table;
-  .item {
-    display: table-row;
+  .list {
+    display: table;
+    line-height: 20px;
+    .item {
+      display: table-row;
+    }
+    .cell {
+      display: table-cell;
+    }
+    .label {
+      display: table-cell;
+      padding-right: 8px;
+      white-space: nowrap;
+    }
   }
-  .cell {
-    display: table-cell;
+  .work {
+    display: flex;
   }
-  .label {
-    display: table-cell;
-    padding-right: 8px;
-    white-space: nowrap;
-  }
-}
-
-.work {
-  display: flex;
   .icon {
     width: 40px;
     height: 40px;
+    display: block;
     border-radius: 4px;
   }
   .main {
     margin-left: 16px;
   }
-}
-
-.main {
   .name {
     font-size: 16px;
     font-weight: 600;
-    line-height: 24px;
+    line-height: 18px;
   }
   .desc {
-    opacity: .7;
+    opacity: .6;
     font-size: 12px;
     line-height: 16px;
+    margin-top: 6px;
   }
   .content {
-    margin-top: 8px;
+    margin-top: 6px;
+    margin-bottom: -2px;
   }
 }

@@ -5,6 +5,7 @@ import ICON01 from './icon01.webp'
 import ICON02 from './icon02.webp'
 import ICON03 from './icon03.webp'
 import ICON04 from './icon04.webp'
+import AVATAR from './avatar.png'
 
 const ATTRS_LIST: {
   label: string
@@ -35,10 +36,14 @@ const ATTRS_LIST: {
     },
     {
       label: '意向',
-      content: '成都，国企前端'
+      content: '成都，国企，前端'
     }
   ],
   [
+    {
+      label: '微信',
+      content: 'xueyan-site'
+    },
     {
       label: '手机',
       content: <a href='tel://15070836209' target="_blank">150-7083-6209</a>
@@ -46,10 +51,6 @@ const ATTRS_LIST: {
     {
       label: '邮箱',
       content: <a href='mailto://xueyan@xueyan.site' target="_blank">xueyan@xueyan.site</a>
-    },
-    {
-      label: '微信',
-      content: 'xueyan-site'
     }
   ]
 ]
@@ -60,22 +61,21 @@ export default function Index() {
       <div className={styles.page}>
 
         <div className={styles.header}>
-          <div className={styles.left}>
-            <div className={styles.name}>
-              杨凡
+          <img className={styles.avatar} src={AVATAR}/>
+          <div className={styles.content}>
+            <div className={styles.name}>杨凡</div>
+            <div className={styles.attrss}>
+              {ATTRS_LIST.map((attrs, i) => (
+                <div key={i} className={styles.attrs}>
+                  {attrs.map((attr, j) => (
+                    <div key={j} className={styles.attr}>
+                      <span className={styles.label}>{attr.label}</span>
+                      {attr.content}
+                    </div>
+                  ))}
+                </div>
+              ))}
             </div>
-          </div>
-          <div className={styles.right}>
-            {ATTRS_LIST.map((attrs, i) => (
-              <div key={i} className={styles.attrs}>
-                {attrs.map((attr, j) => (
-                  <div key={j} className={styles.attr}>
-                    <span className={styles.label}>{attr.label}</span>
-                    {attr.content}
-                  </div>
-                ))}
-              </div>
-            ))}
           </div>
         </div>
 
@@ -145,15 +145,13 @@ export default function Index() {
               <div className={styles.main}>
                 <div className={styles.name}>小红书</div>
                 <div className={styles.desc}>
-                  2018.07 ~ 2019.02（7月）｜ 电商C端 ｜前端工程师
-                  <br/>
-                  2017.07 ~ 2018.06（11月）｜ 电商B端 ｜前端实习生
+                  2018.07 ~ 2019.02（正职7个月）｜ 2017.07 ~ 2018.06（实习11个月）｜ 电商 ｜ 前端工程师
                 </div>
                 <div className={styles.desc}></div>
                 <div className={styles.content}>
-                  实习期间，在电商B端工作，负责电商运营系统，和商家页面装修编辑器；
+                  前期，在电商B端，负责电商运营系统，和商家页面装修编辑器；
                   <br/>
-                  转正后，在电商C端工作，负责小红书 App 电商部分页面，以及小程序平台的部分功能；
+                  后期，在电商C端，负责小红书 App 部分电商页面，参与建设小程序平台；
                 </div>
               </div>
             </div>
@@ -163,33 +161,29 @@ export default function Index() {
         <div className={styles.section}>
           <div className={styles.title}>重要项目经历</div>
           <div className={styles.block}>
-            <div className={styles.main}>
-              <div className={styles.name}>
-                拼多多 店铺装修
-              </div>
-              <div className={styles.desc}>
-                2019年初 ～ 2022年4月
-              </div>
-              <div className={styles.content}>
-                <div>从零建立起店铺首页、专题页、品牌装修、小程序装修、模版市场等装修业务；</div>
-                <div>自我调研实现，页面装修框架，推广服务于商家端所有装修和类装修业务，包括商详装修、平台协议等；</div>
-                <div>技术：React、Typescript、内部组件库、自研装修框架、微前端架构（PC）、客户端组件包（移动端）；</div>
-              </div>
+            <div className={styles.name}>
+              拼多多 店铺装修
+            </div>
+            <div className={styles.desc}>
+              2019年初 ～ 2022年4月
+            </div>
+            <div className={styles.content}>
+              <div>独自建立店铺首页、专题页、品牌装修、小程序装修、模版市场等装修业务；</div>
+              <div>自我调研实现，页面装修框架，推广服务于商家端所有装修和类装修业务，包括商详装修、平台协议等；</div>
+              <div>技术：React、Typescript、内部组件库、自研装修框架、微前端架构（PC）、客户端组件包（移动端）；</div>
             </div>
           </div>
           <div className={styles.block}>
-            <div className={styles.main}>
-              <div className={styles.name}>
-                拼多多 <a href="https://pifa.pinduoduo.com/">批发市场</a>
-              </div>
-              <div className={styles.desc}>
-                2020年下半年 ～ 2021年下半年
-              </div>
-              <div className={styles.content}>
-                <div>参与了从零建立批发的 PC 端和移动端整个过程，主要负责首页、商品详情页，和整体业务分配；</div>
-                <div>自我调研实现，商品的 SKU 单选和多选算法，抽成框架，供商家端所有选品处使用；</div>
-                <div>技术：React、Typescript、内部组件库、HTML构建时渲染骨架屏（PC）、服务端渲染（移动端）；</div>
-              </div>
+            <div className={styles.name}>
+              拼多多 <a href="https://pifa.pinduoduo.com/">批发市场</a>
+            </div>
+            <div className={styles.desc}>
+              2020年下半年 ～ 2021年下半年
+            </div>
+            <div className={styles.content}>
+              <div>参与从零搭建批发 PC 和移动端整个过程，负责首页、商品详情页，和整体业务分配；</div>
+              <div>自我调研实现，商品 SKU 单选和多选工具包，推广服务于商家端所有选品场景；</div>
+              <div>技术：React、Typescript、内部组件库、HTML构建时渲染骨架屏（PC）、服务端渲染（移动端）；</div>
             </div>
           </div>
         </div>
