@@ -22,13 +22,13 @@ const ATTRS_LIST: {
     },
     {
       label: '籍贯',
-      content: '四川南充'
+      content: '四川，南充'
     }
   ],
   [
     {
       label: '工作',
-      content: '四年，前端'
+      content: '前端，四年'
     },
     {
       label: '目前',
@@ -36,7 +36,7 @@ const ATTRS_LIST: {
     },
     {
       label: '意向',
-      content: '成都，国企，前端'
+      content: '成都，前端，15k+'
     }
   ],
   [
@@ -63,20 +63,28 @@ export default function Index() {
         <div className={styles.header}>
           <img className={styles.avatar} src={AVATAR}/>
           <div className={styles.content}>
-            <div className={styles.name}>杨凡</div>
-            <div className={styles.attrss}>
-              {ATTRS_LIST.map((attrs, i) => (
-                <div key={i} className={styles.attrs}>
-                  {attrs.map((attr, j) => (
-                    <div key={j} className={styles.attr}>
-                      <span className={styles.label}>{attr.label}</span>
-                      {attr.content}
-                    </div>
-                  ))}
-                </div>
-              ))}
+            <div className={styles.info}>
+              <div className={styles.name}>杨凡</div>
+              <div className={styles.attrss}>
+                {ATTRS_LIST.map((attrs, i) => (
+                  <div key={i} className={styles.attrs}>
+                    {attrs.map((attr, j) => (
+                      <div key={j} className={styles.attr}>
+                        <span className={styles.label}>{attr.label}</span>
+                        {attr.content}
+                      </div>
+                    ))}
+                  </div>
+                ))}
+              </div>
             </div>
           </div>
+        </div>
+
+        <div className={styles.intro}>
+          曾就业于上海小红书和拼多多，有四年的前端从业经历。
+          接触过大部分前端项目类型（如微信小程序、服务端渲染程序、微服务架构、构建预渲染程序），
+          曾参与、独立负责和管理过大型项目（如拼多多店铺业务线，批发业务线），有从零构建大型项目的经验。
         </div>
 
         <div className={styles.section}>
@@ -86,7 +94,7 @@ export default function Index() {
                 <img className={styles.icon} src={ICON04}/>
                 <div className={styles.main}>
                   <div className={styles.name}>东华理工大学</div>
-                  <div className={styles.desc}>2014.09 ~ 2018.07 ｜ 软件工程 本科 学士</div>
+                  <div className={styles.desc}>2014.09 ~ 2018.07 ｜ 软件工程 ｜ 本科学士</div>
                 </div>
               </div>
             </div>
@@ -116,7 +124,7 @@ export default function Index() {
               <img className={styles.icon} src={ICON01}/>
               <div className={styles.main}>
                 <div className={styles.name}>蚂蚁集团</div>
-                <div className={styles.desc}>2022.08 ~ 至今 ｜ 体验技术部 ｜ 高级前端工程师</div>
+                <div className={styles.desc}>2022.08 ~ 至今 ｜ 成都 体验技术部 ｜ 高级前端工程师</div>
                 <div className={styles.content}>
                   负责 WorldFirst 平台的注册、入驻、完善资料、开通服务等基础功能；
                 </div>
@@ -128,13 +136,13 @@ export default function Index() {
               <img className={styles.icon} src={ICON02}/>
               <div className={styles.main}>
                 <div className={styles.name}>拼多多</div>
-                <div className={styles.desc}>2019.02 ~ 2022.04（3年3月）｜ 商家前端 ｜高级前端工程师</div>
+                <div className={styles.desc}>2019.02 ~ 2022.04（3年3月）｜ 上海 商家前端 ｜高级前端工程师</div>
                 <div className={styles.content}>
-                  前期，独立负责 <strong>店铺装修</strong>，包括商家店铺首页、商品详情页等装修场景；
+                  前期：独立负责 <strong>店铺装修</strong>，包括商家店铺首页、商品详情页等装修场景；
                   <br/>
-                  中期，负责 <a href="https://pifa.pinduoduo.com/">批发市场</a>，包括移动端和 PC 端；
+                  中期：负责 <a href="https://pifa.pinduoduo.com/">批发业务线</a>，包括移动端和 PC 端；
                   <br/>
-                  后期，负责 <strong>店铺业务线</strong>，包括店铺装修、店铺基础功能（入驻、退店、填报资料、管理账号等）、平台治理（违规处罚相关功能）等业务；
+                  后期：负责 <strong>店铺业务线</strong>，包括店铺装修、店铺基础功能（入驻、退店、填报资料、管理账号等）、平台治理（违规处罚相关功能）等业务；
                 </div>
               </div>
             </div>
@@ -145,13 +153,13 @@ export default function Index() {
               <div className={styles.main}>
                 <div className={styles.name}>小红书</div>
                 <div className={styles.desc}>
-                  2018.07 ~ 2019.02（正职7个月）｜ 2017.07 ~ 2018.06（实习11个月）｜ 电商 ｜ 前端工程师
+                  2018.07 ~ 2019.02（正职7个月）2017.07 ~ 2018.06（实习11个月）｜ 上海 电商 ｜ 前端工程师
                 </div>
                 <div className={styles.desc}></div>
                 <div className={styles.content}>
-                  前期，在电商B端，负责电商运营系统，和商家页面装修编辑器；
+                  前期：在电商B端，负责电商运营系统，和商家页面装修编辑器；
                   <br/>
-                  后期，在电商C端，负责小红书 App 部分电商页面，参与建设小程序平台；
+                  后期：在电商C端，负责小红书 App 部分电商页面，参与建设小程序平台；
                 </div>
               </div>
             </div>
@@ -168,7 +176,7 @@ export default function Index() {
               2019年初 ～ 2022年4月
             </div>
             <div className={styles.content}>
-              <div>独自建立店铺首页、专题页、品牌装修、小程序装修、模版市场等装修业务；</div>
+              <div>独立负责搭建、维护店铺首页、专题页、品牌装修、小程序装修、模版市场等装修业务；</div>
               <div>自我调研实现，页面装修框架，推广服务于商家端所有装修和类装修业务，包括商详装修、平台协议等；</div>
               <div>技术：React、Typescript、内部组件库、自研装修框架、微前端架构（PC）、客户端组件包（移动端）；</div>
             </div>
@@ -181,7 +189,7 @@ export default function Index() {
               2020年下半年 ～ 2021年下半年
             </div>
             <div className={styles.content}>
-              <div>参与从零搭建批发 PC 和移动端整个过程，负责首页、商品详情页，和整体业务分配；</div>
+              <div>参与从零搭建批发 PC 及移动端整个过程，负责首页、商品详情页的实现、维护，和批发的业务分配工作；</div>
               <div>自我调研实现，商品 SKU 单选和多选工具包，推广服务于商家端所有选品场景；</div>
               <div>技术：React、Typescript、内部组件库、HTML构建时渲染骨架屏（PC）、服务端渲染（移动端）；</div>
             </div>
