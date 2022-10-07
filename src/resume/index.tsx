@@ -1,5 +1,4 @@
 import React from 'react'
-import { WideScreen } from 'com/wide-screen'
 import styles from './index.scss'
 import ICON01 from './icon01.webp'
 import ICON02 from './icon02.webp'
@@ -32,11 +31,11 @@ const ATTRS_LIST: {
     },
     {
       label: '目前',
-      content: '成都，蚂蚁金服'
+      content: '成都，蚂蚁集团'
     },
     {
       label: '意向',
-      content: '成都，前端，15k+'
+      content: '成都，前端'
     }
   ],
   [
@@ -82,9 +81,9 @@ export default function Index() {
         </div>
 
         <div className={styles.intro}>
-          曾就业于上海小红书和拼多多，有四年的前端从业经历。
-          接触过大部分前端项目类型（如微信小程序、服务端渲染程序、微服务架构、构建预渲染程序），
-          曾参与、独立负责和管理过大型项目（如拼多多店铺业务线，批发业务线），有从零构建大型项目的经验。
+          曾就业于上海小红书和拼多多，有四年前端从业经历。
+          接触过微信小程序、服务端渲染程序、微前端程序、构建预渲染程序等常见前端项目类型。
+          参与、独立负责和管理过大型项目，如拼多多店铺业务线，批发业务线，有从零构建和维护大型项目的经验。
         </div>
 
         <div className={styles.section}>
