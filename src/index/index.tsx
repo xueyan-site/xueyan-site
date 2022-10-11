@@ -14,7 +14,9 @@ export default function Index() {
       <div className={styles.lists}>
         <Projects />
       </div>
-      <Bottom style={{ height: '60px' }} />
+      <Bottom className={styles.bottom}>
+        <a href="https://beian.miit.gov.cn">蜀ICP备2021030705号-1</a>
+      </Bottom>
     </NarrowScreen>
   )
 }
