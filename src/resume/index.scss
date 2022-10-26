@@ -10,17 +10,18 @@ html, body {
   font-weight: 400;
   .page {
     width: 780px;
+    height: 1120px;
     margin: 0 auto;
-    padding: 50px;
+    padding: 50px 50px 0;
     box-sizing: border-box;
     position: relative;
   }
-  a {
-    color: #0033EE;
-  }
   strong {
-    color: #8041a5;
+    color: var(--purple);
     font-weight: 400;
+  }
+  a {
+    color: var(--blue);
   }
 }
 
@@ -79,6 +80,7 @@ html, body {
     display: block;
     padding: 8px 16px;
     opacity: .5;
+    font-size: 13px;
   }
   .block {
     background-color: #fff;
@@ -130,6 +132,14 @@ html, body {
     font-size: 16px;
     font-weight: 600;
     line-height: 18px;
+  }
+  .tech {
+    margin-left: 12px;
+    font-size: 12px;
+    opacity: .6;
+    font-weight: 400;
+    white-space: pre;
+    line-height: 12px;
   }
   .desc {
     opacity: .6;
